@@ -135,4 +135,4 @@ If `TimeMaster` helps your research, we would appreciate it if you could cite ou
 
 # Acknowledgements
 
-We thank the **[veRL](https://github.com/volcengine/verl)** project for foundational RL infrastructure.
+We thank the **[veRL](https://github.com/volcengine/verl)** project for foundational RL infrastructure and **[Qwen2-VL-Finetune](https://github.com/2U1/Qwen2-VL-Finetune)** project for support in SFT.
