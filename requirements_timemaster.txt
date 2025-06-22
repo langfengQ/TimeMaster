@@ -1,4 +1,5 @@
 matplotlib
 liac-arff==2.5.0
 scikit-learn==1.6.1
+datasets==3.6.0
 gdown
