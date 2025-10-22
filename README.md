@@ -133,7 +133,7 @@ We will release numeric-modality comparison resources to compare image-based and
 
 # Discussion: Image vs Numeric Inputs
 
-![Accuracy and Token Cost: Image vs Numeric Inputs](./assets/num_image.pdf)
+![Accuracy and Token Cost: Image vs Numeric Inputs](./assets/num_image.jpg)
 
 *Accuracy and relative token cost of TimeMaster (SFT+RL) using image-based and numeric inputs across six tasks.*
 
