@@ -1,4 +1,9 @@
-<h1 align="center">TimeMaster: Training Time-Series Multimodal LLMs to Reason via Reinforcement Learning</h1>
+<h2 align="center">
+TimeMaster: Training Time-Series Multimodal LLMs to Reason via Reinforcement Learning  
+<br>
+<b>@ <a href="https://berts-workshop.github.io/">BERT2S</a> NeurIPS 2025</b>
+</h2>
+
 
 <p align="center">
   <a href="https://arxiv.org/abs/2506.13705">
@@ -14,7 +19,7 @@
 `TimeMaster` is a reinforcement‑learning‑enhanced framework for training **time‑series multimodal large language models (MLLMs)**. It enables **structured, interpretable reasoning** over visualized time‑series signals and has been evaluated on real‑world tasks such as EMG, ECG and Human Activity Recognition (HAR) using Qwen2.5‑VL‑3B‑Instruct.
 
 # News
-- [2025.09.23] Our paper was accepted to the NeurIPS 2025 Workshop [BERT2S](https://berts-workshop.github.io/).
+- [2025.09.23] `TimeMaster` accepted at NeurIPS 2025 Workshop [BERT2S](https://berts-workshop.github.io/).
 - [2025.06.21] SFT model released. See [link](https://huggingface.co/collections/langfeng01/timemaster-68554b6ec27ee539d07a6e40).
 - [2025.06.21] Code released.
 - [2025.06.16] Our paper on `TimeMaster` released. See [link](https://arxiv.org/abs/2506.13705).
@@ -135,12 +140,9 @@ We will release numeric-modality comparison resources to compare image-based and
 **Impact of Input Modality.**  
 To explore the effect of input modality, we compare `TimeMaster` using visual inputs (line plots) with a numeric-input variant that processes raw tokenized values, as shown in the figure above. Both models share the same Qwen2.5-3B architecture and are trained under an identical two-stage pipeline (SFT + RL), differing only in input format.
 
-1. **Visual inputs enable more robust reasoning.** As shown, visual inputs consistently yield higher accuracy than numeric inputs. This is because numeric inputs impose a heavy symbolic burden on the model, often leading to hallucinations and fragmented reasoning that undermine performance. In contrast, visual representations capture global temporal structures, such as trends, peaks, and rhythmic patterns, that closely mirror the diagnostic strategies employed by human experts in fields such as ECG and EMG analysis.
+- **Visual inputs enable more robust reasoning.** As shown, visual inputs consistently yield higher accuracy than numeric inputs. This is because numeric inputs impose a heavy symbolic burden on the model, often leading to hallucinations and fragmented reasoning that undermine performance. In contrast, visual representations capture global temporal structures, such as trends, peaks, and rhythmic patterns, that closely mirror the diagnostic strategies employed by human experts in fields such as ECG and EMG analysis.
 
-2. **Visual inputs offer superior token efficiency.** Numeric sequences scale linearly with length and often consume 5$\times$ more tokens than visual representations. For example, a 4k-point sequence can yield over 40k tokens, more than 88$\times$ its visual counterpart, whereas our visual inputs maintain fixed size regardless of sequence length, greatly improving scalability.
-
-3. **Training with numeric inputs leads to instability.** Models trained on raw values frequently exhibit semantic drift, hallucinated reasoning, and eventual collapse of output structure. Due to persistent degradation, we halted training early and report the best validation result prior to termination here.
-
+- **Visual inputs offer superior token efficiency aligned with findings from [DeepSeek-OCR](https://www.arxiv.org/pdf/2510.18234).** Numeric sequences scale linearly with length and often consume 5x more tokens than visual representations. For example, a 4k-point sequence can yield over 40k tokens, more than 88x its visual counterpart, whereas our visual inputs maintain fixed size regardless of sequence length, greatly improving scalability.
 
 # Citation
 
